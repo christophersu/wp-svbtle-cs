@@ -465,10 +465,7 @@ function remove_kudos() {
 function wps_footer(){
 
 	if ( current_user_can( 'administrator' ) ) {
-		
 		$options = get_option ( 'svbtle_options' ); 
-
-		echo "<img src='http://gravityonmars.com/wp-svbtle.php?host=". get_home_url() ."&name=" . urlencode(get_bloginfo('name')) . "&icon=" . urlencode(get_header_image()) . "&color=" . urlencode($options["color"]) ."' />";
 	}
 
 }
