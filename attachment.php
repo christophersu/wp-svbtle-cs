@@ -79,22 +79,14 @@ get_header(); ?>
 								echo wp_get_attachment_image( $post->ID, array( $attachment_size, 9999 ) ); // filterable image width with, essentially, no limit for image height.
 							?></a></p>
 							<nav id="nav-below" class="navigation">
-								<div class="nav-previous"><?php previous_image_link( false ); ?></div>
-								<div class="nav-next"><?php next_image_link( false ); ?></div>
+								← <?php previous_image_link( false ); ?> | <?php next_image_link( false ); ?> →
 							</nav><!-- #nav-below -->
+					
 <?php else : ?>
 							<a href="<?php echo wp_get_attachment_url(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php echo basename( get_permalink() ); ?></a>
 <?php endif; ?>
 						</div><!-- .entry-attachment -->
-						<div class="entry-caption"><?php if ( !empty( $post->post_excerpt ) ) the_excerpt(); ?></div>
-<?php the_content( __( 'Continue reading &rarr;', 'boilerplate' ) ); ?>
-<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'boilerplate' ), 'after' => '' ) ); ?>
-						<footer class="entry-utility">
-							<?php boilerplate_posted_in(); ?>
-							<?php edit_post_link( __( 'Edit', 'boilerplate' ), ' <span class="edit-link">', '</span>' ); ?>
-						</footer><!-- .entry-utility -->
-<?php comments_template(); ?>
-					</div><!-- .entry-content -->
+						
 				</article>
 <?php endwhile; ?>
 <?php get_footer(); ?>
