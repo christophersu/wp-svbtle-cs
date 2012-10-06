@@ -45,12 +45,12 @@
 		    </div>
 		  </aside>
 		  <ul id="user_meta">
-		    <li class="blog_name">  
+		    <!-- <li class="blog_name">  
 		      <h1 id="blog_name">
 			      <a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a>
 		      </h1>
-		    </li>
-				<li class="blog_owner">  
+		    </li> --> <br />
+		<li class="blog_owner">  
 		      <h2 id="blog_owner">
 		        <a href="<?php echo home_url( '/' ); ?>"><?php echo $options['theme_username'] ?></a>
 		      </h2>
